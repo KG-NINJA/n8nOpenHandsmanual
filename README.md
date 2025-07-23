@@ -37,6 +37,54 @@ sudo docker run -it --rm \
 2. Slackノードで通知を送信
 
 ## 参考リンク
+
+## 主なノードの種類一覧
+
+n8nには多くのノードが用意されており、以下のような種類があります（一部抜粋）：
+
+### コアノード（基本機能）
+- **Start**：ワークフローの開始点
+- **Webhook**：外部からのHTTPリクエストでワークフローを開始
+- **HTTP Request**：任意のAPIリクエストを送信
+- **Function**：JavaScriptで独自の処理を記述
+- **Set**：データの整形や値のセット
+- **IF**：条件分岐
+- **Switch**：複数条件で分岐
+- **Merge**：複数のデータストリームを統合
+- **Wait**：指定時間待機
+- **Code**：TypeScript/JavaScriptで高度な処理
+- **SplitInBatches**：データをバッチ処理
+- **NoOp**：何もしないノード
+
+### トリガーノード（ワークフローの起動）
+- **Cron**：スケジュール実行
+- **Email Trigger**：メール受信で起動
+- **Webhook**：外部サービスからのリクエストで起動
+- **IMAP Email**：IMAPメール受信で起動
+- **Google Sheets Trigger**：Googleスプレッドシートの変更で起動
+
+### サービス連携ノード（一部例）
+- **Gmail**：メール送受信
+- **Slack**：メッセージ送信・取得
+- **Google Sheets**：スプレッドシートの読み書き
+- **Trello**：カードやリストの操作
+- **GitHub**：IssueやPRの管理
+- **Dropbox**：ファイル操作
+- **Twitter**：ツイートやDMの送信
+- **Notion**：データベースやページの操作
+- **Airtable**：データベース操作
+- **Discord**：メッセージ送信
+- **MySQL/PostgreSQL**：データベース操作
+- **AWS S3**：ファイルのアップロード・ダウンロード
+
+### その他
+- **RSS Feed Read**：RSSフィードの取得
+- **Pushbullet**：プッシュ通知
+- **Twilio**：SMS送信
+- **Microsoft Teams**：メッセージ送信
+
+これら以外にも数百種類のノードがあり、さまざまなサービスやAPIと連携できます。
+
 - [公式サイト](https://n8n.io/)
 - [n8nドキュメント（英語）](https://docs.n8n.io/)
 - [n8n GitHub](https://github.com/n8n-io/n8n)
